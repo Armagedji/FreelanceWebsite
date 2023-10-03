@@ -1,0 +1,28 @@
+<html>
+    <head>
+        
+    </head>    
+    <body>
+        <h1>orders page</h1>
+
+        <ul>
+            {% for order in orders %}
+            <li>
+                <p>
+                    <b><u>{{ order.title }}:</u></b> {% if order.completed %}Completed{% else %}Not completed{% endif %}
+                </p>
+                <p>
+                    {{ order.description}}
+                </p>
+                <p>
+                    Price: {{ order.price }}
+                </p>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <a href="{% url 'home' %}"><button>Home page</button></a>
+        <a href="{% url 'orderUpload' %}"><button>Upload an order</button></a>
+        
+    </body>
+</html>

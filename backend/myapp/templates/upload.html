@@ -1,0 +1,8 @@
+<form method="POST" action="{% url 'upload' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button>Submit</button>
+</form>
+
+<a href="{% url 'home' %}"><button>Home page</button></a>
+<a href="{% url 'todos' %}"><button>Todo</button></a>

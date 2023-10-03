@@ -1,0 +1,8 @@
+<form method="POST" action="{% url 'orderUpload' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button>Submit</button>
+</form>
+
+<a href="{% url 'home' %}"><button>Home page</button></a>
+<a href="{% url 'orders' %}"><button>Orders</button></a>
