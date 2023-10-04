@@ -1,0 +1,284 @@
+/* Обнуление стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Шрифты */
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+  
+  /* Стили для шапки */
+  header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav li {
+    margin-right: 20px;
+  }
+  
+  nav a {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #ff5e3a;
+  }
+  
+  .header__logo img {
+    height: 40px;
+  }
+  
+  .header__search form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header__search input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    padding: 10px;
+    width: 300px;
+  }
+  
+  .header__search button[type="submit"] {
+    background-color: #ff5e3a;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header__search button[type="submit"]:hover {
+    background-color: #e54c2e;
+  }
+  
+  .header__user a {
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 20px;
+    text-decoration: none;
+  }
+  
+  .header__user a:first-child {
+    margin-left: 0;
+  }
+  
+  .header__user a:hover {
+    color: #ff5e3a;
+  }
+  
+  /* Стили для основного контента */
+  main {
+    margin-top: 80px;
+  }
+  
+  .main__hero {
+    background-color: #ff5e3a;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+  }
+  
+  .main__hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .main__hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  
+  .btn {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: #ff5e3a;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #ff5e3a;
+    color: #fff;
+  }
+  
+  .main__categories {
+    background-color: #f5f5f5;
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .main__categories h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  .main__categories ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .main__categories li {
+    margin-right: 20px;
+  }
+  
+  .main__categories a {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: #333;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .main__categories a:hover {
+    background-color: #ff5e3a;
+    border-color: #ff5e3a;
+    color: #fff;
+  }
+  
+  .main__services {
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .main__services h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 40px;
+  }
+  
+  .main__services ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .main__services li {
+    margin-right: 20px;
+    margin-bottom: 40px;
+    width: 300px;
+  }
+  
+  .main__services img {
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .main__services h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .main__services p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .main__services a {
+    background-color: #fff;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    color: #333;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .main__services a:hover {
+    background-color: #ff5e3a;
+    border-color: #ff5e3a;
+    color: #fff;
+  }
+  
+  /* Стили для подвала */
+  footer {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .footer__logo img {
+    height: 40px;
+  }
+  
+  .footer__nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .footer__nav li {
+    margin-right: 20px;
+  }
+  
+  .footer__nav a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer__nav a:hover {
+    color: #ff5e3a;
+  }
+  
+  .footer__social a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer__social a:hover {
+    color: #ff5e3a;
+  }

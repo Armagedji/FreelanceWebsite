@@ -4,9 +4,11 @@ from .models import freelanceOrder
 from .forms import uploadForm
 from .forms import orderUploadForm
 
+from django.views.generic import TemplateView
+
 # Create your views here.
-def home(request):
-    return render(request, "home.html")
+def mainPage(request):
+    return render(request, "html.html")
 
 def todos(request):
     items = TodoItem.objects.all()
@@ -35,3 +37,9 @@ def orderUpload(request):
             form.save()
 
     return render(request, "orderUpload.html", {"form" : orderUploadForm})
+
+class test(TemplateView):
+    template_name = "testingVue.html"
+
+def home(request):
+    return render(request, "home.html")
