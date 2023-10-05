@@ -5,8 +5,8 @@ from .forms import orderUploadForm
 from django.views.generic import TemplateView
 
 # Create your views here.
-def mainPage(request):
-    return render(request, "mainPage.html")
+def home(request):
+    return render(request, "home.html")
 
 def orders(request):
     orderItems = freelanceOrder.objects.all()
@@ -24,6 +24,3 @@ def orderUpload(request):
 
 class test(TemplateView):
     template_name = "testingVue.html"
-
-def home(request):
-    return render(request, "home.html")

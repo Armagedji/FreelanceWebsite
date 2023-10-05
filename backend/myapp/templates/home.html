@@ -1,12 +1,103 @@
-<html>
-    <head>
-        
-    </head>    
-    <body>
-        <p>Home page</p>
-        <p>
-            <a href="{% url 'orders' %}"><button>Orders</button></a>
-            <a href="{% url 'orderUpload' %}"><button>Upload an order</button></a>
-        </p>
-    </body>
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Название сайта</title>
+  <link rel="stylesheet" href="{% static 'css.css' %}">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Главная</a></li>
+        <li><a href="{% url 'orders' %}">Заказы</a></li>
+        <li><a href="#">Исполнители</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="header__logo">
+      <a href="#"><img src="logo.png" alt="Логотип"></a>
+    </div>
+    <div class="header__search">
+      <form>
+        <input type="text" placeholder="Поиск">
+        <button type="submit"><i class="fas fa-search"></i></button>
+      </form>
+    </div>
+    <div class="header__user">
+      {% if user.is_authenticated %}
+      do something
+      {% else %}
+      <a href="{% url 'loginUser' %}">Войти / Зарегистрироваться</a>
+      {% endif %}
+    </div>
+  </header>
+  <main>
+    <section class="main__hero">
+      <h1>Название сайта</h1>
+      <p>Описание сайта</p>
+    </section>
+    <section class="main__categories">
+      <h2>Категории</h2>
+      <ul>
+        <li><a href="#">Веб-разработка</a></li>
+        <li><a href="#">Дизайн</a></li>
+        <li><a href="#">Маркетинг</a></li>
+        <li><a href="#">Переводы</a></li>
+        <li><a href="#">Аудио/Видео</a></li>
+        <li><a href="#">Разное</a></li>
+      </ul>
+    </section>
+    <section class="main__services">
+      <h2>Популярные услуги</h2>
+      <ul>
+        <li>
+          <a href="#">
+            <img src="service1.png" alt="Услуга 1">
+            <h3>Название услуги 1</h3>
+            <p>Описание услуги 1</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="service2.png" alt="Услуга 2">
+            <h3>Название услуги 2</h3>
+            <p>Описание услуги 2</p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="service3.png" alt="Услуга 3">
+            <h3>Название услуги 3</h3>
+            <p>Описание услуги 3</p>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <div class="footer__logo">
+      <a href="#"><img src="logo.png" alt="Логотип"></a>
+    </div>
+    <div class="footer__nav">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Заказы</a></li>
+        <li><a href="#">Исполнители</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </div>
+    <div class="footer__social">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
+</body>
 </html>
+
