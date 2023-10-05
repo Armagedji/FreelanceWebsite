@@ -29,15 +29,17 @@
       </form>
     </div>
     <div class="header__user">
-      <a href="#">Войти</a>
-      <a href="#">Регистрация</a>
+      {% if user.is_authenticated %}
+      do something
+      {% else %}
+      <a href="{% url 'loginUser' %}">Войти / Зарегистрироваться</a>
+      {% endif %}
     </div>
   </header>
   <main>
     <section class="main__hero">
       <h1>Название сайта</h1>
       <p>Описание сайта</p>
-      <a href="#" class="btn">Зарегистрироваться</a>
     </section>
     <section class="main__categories">
       <h2>Категории</h2>

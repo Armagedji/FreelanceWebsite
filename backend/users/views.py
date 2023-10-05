@@ -13,7 +13,7 @@ def loginUser(request):
             return redirect("home")
         else:
             messages.success(request, ("There was an error logging in, try again"))
-            return redirect("login")
+            return redirect("loginUser")
 
     else:
         return render(request, "authentication/login.html", {})
