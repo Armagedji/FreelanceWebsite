@@ -1,0 +1,16 @@
+{% if form.errors %}
+<p>Произошла ошибка с формой регистрации</p>
+{% endif %}
+
+<h1>Регистрация</h1>
+
+<form action='{% url "registerUser" %}' method="POST">
+    {% csrf_token %}
+        {{ form.as_p }}
+
+        <br>
+        <br>
+
+        <input type="submit" value="Submit">
+    
+</form>

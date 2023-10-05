@@ -1,4 +1,4 @@
-<h1>Login</h1>
+<h1>Войти в аккаунт</h1>
 {% if messages %}
     {% for message in messages %}
         {{message}}
@@ -8,11 +8,11 @@
     {% csrf_token %}
 
         <div>
-          <label for="exampleInputEmail1" class="form-label">Username</label>
+          <label for="exampleInputEmail1" class="form-label">Имя пользователя</label>
           <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
         </div>
         <div>
-          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <label for="exampleInputPassword1" class="form-label">Пароль</label>
           <input type="password" class="form-control" name="password">
         </div>
         
